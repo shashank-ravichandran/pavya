@@ -2,6 +2,7 @@ import OurStory from "../components/OurStory";
 import ProductsSection from "../components/ProductsSection";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import logo from "../assets/PavyaLogo-1.png";
 
 export default function Home() {
   const partners = ["Partner A", "Partner B", "Partner C", "Partner D"];
@@ -29,12 +30,12 @@ export default function Home() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFade(false); // start fading out
+      setFade(false);
       setTimeout(() => {
         setCurrentPartner((prev) => (prev + 1) % partners.length);
-        setFade(true); // fade back in
-      }, 1000); // fade duration matches CSS transition
-    }, 5000); // change every 5 seconds
+        setFade(true);
+      }, 1000); 
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [partners.length]);
@@ -44,8 +45,7 @@ export default function Home() {
       <section className="hero">
         <div className="pageSection" style={{ padding: "50px" }}>
           <div className="flex-centered" style={{ justifyContent: "space-evenly", width: "100%" }}>
-            <img src="/images/PavyaLogo-1.png" style={{ height: "auto", width: "500px" }} />
-            {/* <h2>Welcome to Pavya</h2> */}
+            <img src={logo} style={{ height: "auto", width: "500px" }} />
             <div>
               <p style={{ fontSize: "1.5rem" }}>
                 Beyond food.

@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/ProductsSection.css";
+import milk from "../assets/milk.jpg";
+import ghee from "../assets/ghee.jpg";
+import cheese from "../assets/cheese.jpg";
 
 const products = [
   {
     id: 1,
     name: "Fresh Milk",
-    image: "/images/milk.jpg",
+    image: milk,
     description: "Our farm-fresh milk is pure, wholesome, and free from additives.",
     nutrition: {
       Calories: "42 kcal",
@@ -18,7 +21,7 @@ const products = [
   {
     id: 2,
     name: "Bilona Ghee",
-    image: "/images/ghee.jpg",
+    image: ghee,
     description: "Hand-churned in the traditional way. Filled with patience, wisdom, and care.",
     nutrition: {
       Calories: "112 kcal",
@@ -30,7 +33,7 @@ const products = [
   {
     id: 3,
     name: "Curd",
-    image: "/images/cheese.jpg",
+    image: cheese,
     description: "Thick, natural, and untouched by shortcuts. Just the way our homes once knew.",
     nutrition: {
       Calories: "296 kcal",

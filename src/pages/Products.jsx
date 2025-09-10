@@ -1,12 +1,15 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../CartContext";
 import "../styles/Products.css";
+import milk from "../assets/milk.jpg";
+import ghee from "../assets/ghee.jpg";
+import cheese from "../assets/cheese.jpg";
 
 const products = [
   {
     id: 1,
     name: "Fresh Milk",
-    image: "/images/milk.jpg",
+    image: milk,
     description: "Our farm-fresh milk is pure, wholesome, and free from additives.",
     options: [
       { label: "100ml", price: 10 },
@@ -18,7 +21,7 @@ const products = [
   {
     id: 2,
     name: "Bilona Ghee",
-    image: "/images/ghee.jpg",
+    image: ghee,
     description: "Hand-churned in the traditional way. Filled with patience, wisdom, and care.",
     options: [
       { label: "100ml", price: 90 },
@@ -30,7 +33,7 @@ const products = [
   {
     id: 3,
     name: "Curd",
-    image: "/images/cheese.jpg",
+    image: cheese,
     description: "Thick, natural, and untouched by shortcuts. Just the way our homes once knew.",
     options: [
       { label: "100g", price: 30 },
